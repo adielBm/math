@@ -7,9 +7,4 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-
-
-public/**
-!public/static
-!public/static/**
-public/static/contentIndex.json
+public
