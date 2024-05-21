@@ -1,0 +1,15 @@
+.DS_Store
+node_modules
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
+
+
+public/**
+!public/static
+!public/static/**
+public/static/contentIndex.json
