@@ -1,3 +1,7 @@
+---
+title: Welcome
+---
+
 This is my math (and some CS) notebook, which I started writing in the fall of 2022.
 
 - Discrete Mathematics: [20476](https://www.openu.ac.il/courses/20476.htm)
