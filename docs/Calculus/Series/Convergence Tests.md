@@ -1,8 +1,7 @@
 
-- Strategy for Series https://eddieguo.ca/assets/downloads/notes/math101.pdf
+Strategy for Series https://eddieguo.ca/assets/downloads/notes/math101.pdf
 
 - (q5.16) Given a convergent series $\sum_{k=1}^{\infty}a_k$, then $\displaystyle\lim_{n\to\infty}{\sum_{k=n+1}^{\infty}a_k}=0$.
-
 ## Cauchy's Convergence Test
 
 - (5.4) The series $\sum a_n$ converges if and only if for every $\varepsilon>0$ there exists $N_{\varepsilon}$ such that if $\forall n>N_{\varepsilon}$, and $\forall p \in \mathbb{N}$ we have $\left|s_{n+p}-s_{n}\right|=\left|a_{n+1}+a_{n+2}+\cdots+a_{n+p}\right|<\varepsilon$.
