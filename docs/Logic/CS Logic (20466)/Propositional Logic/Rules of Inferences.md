@@ -1,0 +1,37 @@
+
+- Modus ponens (MP) (implication elimination)
+	- $P \to Q,\; P\;\; \vdash\;\; Q$
+- Syllogism
+	- Disjunctive Syllogism (modus tollendo ponens (MTP))
+		- $\displaystyle  P\lor Q,\lnot P\vdash Q$
+	- Hypothetical Syllogism (transitivity, chain argument, chain rule)
+		-  $(P \to Q) \land (Q \to R) \vdash P \to R$ 
+- **Eliminations**
+	- Biconditional Elimination
+		- $\displaystyle  (P\leftrightarrow Q)\vdash (P\to Q)$
+		- $\displaystyle  (P\leftrightarrow Q)\vdash (Q\to P)$
+	- Conjunction Elimination (simplification)
+		- $\displaystyle  (P\land Q)\vdash P$
+		- $\displaystyle  (P\land Q)\vdash Q$
+	- Disjunction Elimination (proof by cases, case analysis, *or* elimination) 
+		- $\displaystyle  (P\to Q),(R\to Q),(P\lor R)\vdash Q$
+- **Introductions**
+	- Biconditional introduction
+		- $\displaystyle  (P\to Q),(Q\to P)\vdash (P\leftrightarrow Q)$
+	- Disjunction introduction (addition, *or* introduction)
+		- $\displaystyle  P\vdash (P\lor Q)$
+	- Conjunction introduction (conjunction, *and* introduction, adjunction)
+		- $\displaystyle  P,Q\vdash P\land Q$
+- Dilemma
+	- Constructive dilemma
+		- $\displaystyle  (P\to Q),(R\to S),(P\lor R)\vdash (Q\lor S)$
+	- Destructive dilemma
+		- $\displaystyle  (P\to Q),(R\to S),(\neg Q\lor \neg S)\vdash (\neg P\lor \neg R)$
+- Modus Tollens (MT)
+	- $\displaystyle  P\rightarrow Q,\neg Q  \therefore \neg P$
+- Absorption
+	- $\displaystyle  P\to Q\vdash P\to (P\land Q)$
+
+- Tautology
+	- $\displaystyle  P\lor P\vdash P$
+	- $\displaystyle  P\land P\vdash P$

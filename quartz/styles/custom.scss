@@ -1,0 +1,52 @@
+@use "./base.scss";
+@use "./variables.scss" as *;
+
+// put your custom CSS here!
+
+body {
+  font-size: 1.1rem;
+}
+#explorer-ul,
+#explorer-content {
+  max-height: 75vh;
+}
+
+.page {
+  & .footer {
+      background-color: none !important;
+  }
+
+  & .center {
+    background-color: var(--light);
+    width: 680px;
+    padding: 0 50px 50px;
+    border-radius: 0 0 10px 10px;
+    border: #cae8f8;
+    border-width: 4px;
+    border-top-width: 0;
+    border-style: solid;
+
+    @media all and (max-width: $fullPageWidth) {
+      border-top-width: 4px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .page {
+    padding: 0;
+  }
+}
+
+ul.overflow:after,
+ol.overflow:after {
+  display: none;
+}
+
+
+footer {
+  opacity: 1;
+  background: none !important;
+}
