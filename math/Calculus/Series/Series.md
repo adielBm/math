@@ -2,7 +2,7 @@
 
 	- The numbers $a_{1},a_{2},\dots$ are called the **terms** of the series. The number $a_n$ is called the $n$-th **term** of the series.
 	- The sequence $(s_n)$ defined by $s_n=\sum_{k=1}^{n}a_k$ is called the **sequence of partial sums** of the series. The number $s_n$ is called the **$n$-th partial sum** of the series.
-	- If $(s_n)$ converges to $L$, we say that the series **converges** and that its **sum** is $L$ and write $$a_1+a_2+a_3+\cdots=\sum_{n=1}^{\infty}a_n=\lim_{ n \to \infty }\sum _{k=1}^{n}a_k=L$$
+	- If $(s_n)$ converges to $L$, we say that the series **converges** and that its **sum** is $L$ and write $$a_1+a_2+a_3+\cdots=\sum_{n=1}^{\infty}a_n=\lim_{ n \to \infty }\underbrace{\sum _{k=1}^{n}a_k}_{s_{n}}=L$$
 	- If the sequence of partial sums $(s_n)$ diverges, then we say that the series **diverges**.  
 		- If $\displaystyle\lim_{n\to\infty}s_n=\infty$, then we say that the series **diverges to infinity**. And denote its sum by $\sum_{n=1}^{\infty}a_n=\infty$. 
 		- If $\displaystyle\lim_{n\to\infty}s_n=-\infty$, then we say that the series **diverges to negative infinity**. And denote its sum by $\sum_{n=1}^{\infty}a_n=-\infty$.

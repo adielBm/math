@@ -1,4 +1,7 @@
 
+
+
+
 | Heb. Course Term               | Notebook Term          | Other Terms                                                             |     |
 | ------------------------------ | ---------------------- | ----------------------------------------------------------------------- | --- |
 | מבני יחסים, מבנים              |                        | Relational Structures                                                   |     |
@@ -11,7 +14,7 @@
 | קשר חד-מקומי                   | Unary connective       |                                                                         |     |
 | קשר דו-מקומי                   | Binary connective      |                                                                         |     |
 | קשר $n$-מקומי                  | $n$-ary connective     |                                                                         |     |
-| (העומק הקשרי, הדרגה            | degree                 |                                                                         |     |
+| העומק הקשרי, הדרגה             | depth                  | degree, height                                                          |     |
 | עצי הצגה                       |                        |                                                                         |     |
 | מודל, פירוש                    | model                  | Valuation, truth assignment, valuation function, השמה                   |     |
 | כלל הניתוק                     | Modus Ponens           | MP                                                                      |     |

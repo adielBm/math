@@ -54,6 +54,22 @@
 | d1.38 | פרמטר החלוקה                                                  | Mesh (or Norm) of partition |                                                              |
 |       |                                                               |                             |                                                              |
 
+
+#### series
+
+
+|                                 |                |                          |
+| ------------------------------- | -------------- | ------------------------ |
+| Taylor polynomial               | פולינום טיילור | $P_{n}(x),T_{n}(x)$      |
+| Taylor’s formula with remainder | פיתוח טיילור   | $f(x)=P_{n}(x)+R_{n}(x)$ |
+|                                 |                |                          |
+|                                 |                |                          |
+|                                 |                |                          |
+|                                 |                |                          |
+
+
+
+
 ### Notations 
 
 |       |                                          | Notations                                                      |

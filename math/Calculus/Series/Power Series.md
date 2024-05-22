@@ -1,21 +1,10 @@
-Power Series (6.2)
-
 - A **power series** (centered at $c$) is a series of the form $\displaystyle\sum_{n=0}^{\infty}a_n(x-c)^n$ where $(a_n)$ is a sequence of real numbers and $c$ is a real number.
 	- The number $c$ is called the **center** of the power series.
 	- The constants $a_0,a_1,a_2,\ldots$ are called the **coefficients** of the power series.
 	- A power series is actually a [[series of functions#Series of Functions|series of functions]], where $f_n(x)=a_n(x-c)^n$.
 	- A power series is a function of $x$, and it is defined for all $x$ in the interval of convergence.
 	- In this discussion, we will talk about power series centered at $0$, of the form $\displaystyle\sum_{n=0}^{\infty}a_nx^n$. But the results can be generalized to power series centered at any real number $c$, by substituting $y=x-c$.
-
-## Convergence of Power Series
-
-- Given a power series $\sum_{n=0}^{\infty}a_n(x-a)^n$. Then there are only three possibilities:
-	- (i) The series converges only when $x=a$.
-	- (ii) The series converges for all $x$.
-	- (iii) There exists a positive number $R$ such that the series converges if $|x-a|<R$ and diverges if $|x-a|>R$. 
-		- The number $R$ is called the **radius of convergence** of the power series.
-		- Interval of convergence #todo
-
+	
 ## Radius of Convergence
 
 Given a power series $\displaystyle\sum_{n=0}^{\infty}a_nx^n$
@@ -51,25 +40,6 @@ Given a power series $\displaystyle\sum_{n=0}^{\infty}a_nx^n$
 	- For all $x\in(-R,R)$, we have $f'(x)=\sum_{n=1}^{\infty}a_nn(x)^{n-1}$. And radius of convergence of $f'$ is $R$ as well. (it's possible that the series of $f$ converges in $\pm R$, but the series of $f'$ converges does not.)
 	- For all $x\in(-R,R)$, we have $\int_{0}^{x}f(t)dt=\sum_{n=0}^{\infty}\frac{a_n}{n+1}x^{n+1}$. And radius of convergence of $\int_{0}^{x}f(t)dt$ is $R$ as well. (it's possible that the series of $f$ converges in $\pm R$, but the series of $\int_{0}^{x}f(t)dt$ converges does not.)
 
-## Representing Functions by Power Series
-
-- (6.15) Given $f(x)$ is infinitely differentiable on $(-r,r)$, then the following are equivalent:
-	- The function $f$ can be represented by a power series on $(-r,r)$
-	- There exists a sequence $(a_n)$ such that for all $x\in(-r,r)$, we have $\displaystyle f(x)=\sum_{n=0}^{\infty}a_nx^n$ 
-	- For all $x\in(-r,r)$, the Taylor series of $f$ at $0$ converges to $f$ at $x$.
-	- For all $x\in(-r,r)$, we have $\displaystyle \lim_{n\to\infty}S_n(x)=f(x)$ (where $S_n(x)=\sum_{k=0}^{n}a_kx^k$ is the $n$-th partial sum of the power series of $f$ at $x$).
-	- For all $x\in(-r,r)$, we have $\displaystyle f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^n$
-	- For all $x\in(-r,r)$, we have $\displaystyle\lim_{n\to\infty}R_n(x)=0$ (where $R_n(x)=\frac{f^{(n+1)}(x)}{(n+1)!}$ is the remainder of the $n$-th Taylor polynomial of $f$ at $x$.)
-	- ניתנת לפיתוח לטור חזקות
-
-
-- If the function $f$ can be represented by a power series on $(-r,r)$, then: 
-	- $f$ is infinitely differentiable on $(-r,r)$.
-	- The power series is unique, and the coefficients given by $a_n=\frac{f^{(n)}(0)}{n!}$.
-
-- #not-in-course Let $I\subset\mathbb{R}$ be an open interval. A function $f:I\to\mathbb{R}$ is **(real) analytic** if for all $a\in I$, there exists some $r>0$ and a sequence of coefficients $(a_n)$ such that $(a-r,a+r)\subset I$ and $f(x)=\sum_{n=0}^{\infty}a_n(x-a)^n$. ( #todo this is stronger than being infinitely differentiable, and weaker than being represented by one power series on the whole interval. i.e. represented by a power series $\implies$ analytic $\implies$ infinitely differentiable)
-
-- #todo check if #not-in-course - If $f$ infinitely differentiable on $(-R,R)$, and there exists $M$ such that $|f^{(n)}(x)|\leq M$ for all $x\in(-R,R)$ and $n\in\mathbb{N}$, then $f$ can be represented by a power series on $[-R,R]$.
 
 ## Operations
 
@@ -91,9 +61,84 @@ Given a power series $\displaystyle\sum_{n=0}^{\infty}a_nx^n$
 
 - The **Taylor series** of a function $f(x)$ (that is [[Derivative#Continuously Differentiability|infinitely differentiable]]) at a point $a$, is the power series $\displaystyle\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n$. 
 	- When $a=0$ the series is called the **Maclaurin series**.
-	- The partial sum formed by the first $n+1$ terms of a Taylor series is a polynomial of degree $n$ that is called the $n$th [[Taylor polynomial]] of $f$ at $a$. (or the $n$th Maclaurin polynomial of $f$)
+	- The partial sum formed by the first $n+1$ terms of a Taylor series is a polynomial of degree $n$ that is called the $n$th [[#Taylor Polynomial]] of $f$ at $a$. (or the $n$th Maclaurin polynomial of $f$)
+
+## Representing Functions
+
+- (6.15) Given $f(x)$ is infinitely differentiable on $(-r,r)$, then the following are equivalent:
+	- The function $f$ can be represented by a power series on $(-r,r)$
+	- There exists a sequence $(a_n)$ such that for all $x\in(-r,r)$, we have $\displaystyle f(x)=\sum_{n=0}^{\infty}a_nx^n$ 
+	- For all $x\in(-r,r)$, the Taylor series of $f$ at $0$ converges to $f$ at $x$.
+	- For all $x\in(-r,r)$, we have $\displaystyle \lim_{n\to\infty}S_n(x)=f(x)$ (where $S_n(x)=\sum_{k=0}^{n}a_kx^k$ is the $n$-th partial sum of the power series of $f$ at $x$).
+	- For all $x\in(-r,r)$, we have $\displaystyle f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^n$
+	- For all $x\in(-r,r)$, we have $\displaystyle\lim_{n\to\infty}R_n(x)=0$ (where $R_n(x)=\frac{f^{(n+1)}(x)}{(n+1)!}$ is the remainder of the $n$-th Taylor polynomial of $f$ at $x$.)
+	- ניתנת לפיתוח לטור חזקות
 
 
+- If the function $f$ can be represented by a power series on $(-r,r)$, then: 
+	- $f$ is infinitely differentiable on $(-r,r)$.
+	- The power series is unique, and the coefficients given by $a_n=\frac{f^{(n)}(0)}{n!}$.
+
+- #not-in-course Let $I\subset\mathbb{R}$ be an open interval. A function $f:I\to\mathbb{R}$ is **(real) analytic** if for all $a\in I$, there exists some $r>0$ and a sequence of coefficients $(a_n)$ such that $(a-r,a+r)\subset I$ and $f(x)=\sum_{n=0}^{\infty}a_n(x-a)^n$. ( #todo this is stronger than being infinitely differentiable, and weaker than being represented by one power series on the whole interval. i.e. represented by a power series $\implies$ analytic $\implies$ infinitely differentiable)
+
+- #todo check if #not-in-course - If $f$ infinitely differentiable on $(-R,R)$, and there exists $M$ such that $|f^{(n)}(x)|\leq M$ for all $x\in(-R,R)$ and $n\in\mathbb{N}$, then $f$ can be represented by a power series on $[-R,R]$. ( #todo check also if relate to taylor's ineq.)
+
+## Taylor's Theorem
+
+- (wiki) Let $n\geq 1$ be an integer, and let $f:\mathbb{R}\to\mathbb{R}$ be a function that is $n$ times differentiable at the point $a\in\mathbb{R}$. Then there exists a function $R_n:\mathbb{R}\to\mathbb{R}$ such that for all $x\in\mathbb{R}$, we have:
+	- $f(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k+R_n(x)$
+	- $\displaystyle\lim_{x\to a}R_n(x)=0$
+
+- Let $f$ be a function that is $n+1$ times on an interval $I$ containing $a$. Let $P_n(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k$ be the $n$th Taylor polynomial of $f$ at $a$. Then for all $x\in I$, there exists $c$ between $a$ and $x$ such that $R_n(x)=f(x)-P_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.
+	- Conclusion: If there exists $M$ such that $|f^{(n+1)}(x)|\leq M$ for all $x\in I$, then $|R_n(x)|\leq\frac{M}{(n+1)!}|x-a|^{n+1}$.
 
 
+### Estimates for the remainder
+
+#todo it's from wikipedia
+
+Suppose that $f$ is $n+1$ times continuously differentiable in an interval $I$ containing $a$.
+ 
+1. If there exists $q,Q$ such that $q\leq f^{(n+1)}(x)\leq Q$ for all $x\in I$, then for all $x\in I$, we have: 
+	- $q\frac{(x-a)^{n+1}}{(n+1)!}\leq R_n(x)\leq Q\frac{(x-a)^{n+1}}{(n+1)!}$ if $x>a$.
+	- $Q\frac{(x-a)^{n+1}}{(n+1)!}\leq R_n(x)\leq q\frac{(x-a)^{n+1}}{(n+1)!}$ if $x<a$.
+2. If $f^{(n+1)}\leq M$ for all $x\in I=(a-r,a+r)$, (with some $r>0$), then for all $x\in I$, we have $|R_n(x)|\leq M \frac{|x-a|^{n+1}}{(n+1)!}\leq M\frac{r^{n+1}}{(n+1)!}$. (Taylor's Inequality)  (see 'uniform convergence')
+
+## Taylor Polynomial
+
+- Let $f$ be a [[Derivative#Higher-order derivatives|n-times differentiable]] function, 
+	- The polynomial $\displaystyle P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$ is called the $n$th order **Taylor polynomial** of $f$ centered at $a$.
+		- When $a=0$, the polynomial $P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(0)}{k!}}x^{k}$ is called also the **Maclaurin polynomial** of $f$
+		- Taylor Polynomial is partial sum of [[#Taylor Series]] 
+	- The function $R_{n}(x)=f(x)-P_{n}(x)$ is called the $n$-th [[#Remainder Term|remainder]] of $f$ at $a$
+	- The representation $f(x)=P_{n}(x)+R_{n}(x)$ of $f$ is called $n$th order **Taylor’s formula with remainder** of $f$ centered at $a$ 
+
+
+- $P_{n}^{(m)}(a)=f^{(m)}(a)$ (for all $m=0,\dots,n$)
+- (q4.11) Let $f(x)=x^k$ for $k\in\mathbb{N}$, and $P_{n}(x)$ Maclaurin polynomial of $f$, and $R_{n}(x)$ the reminder, then
+	- for all $k>n$, $f(x)=R_{n}(x)$
+	- for all $k\leq n$, $f(x)=P_{n}(x)$
+- (4.7) If $f$ is a $n$ times differentiable (at $a$) function where $R_{n}(x)$ is its n-th remainder at $a$, then $\displaystyle\lim_{ x \to a }\frac{R_{n}(x)}{(x-a)^n}=0$
+- (4.8) (**Uniqueness of Taylor Polynomial**)  If $f$ is a $n$ times differentiable (at $a$) function and $P_{n}$ is a polynomial and $\displaystyle\lim_{ x \to a }\frac{f(x)-P_{n}(x)}{(x-a)}=\lim_{ x \to a }\frac{R_{n}(x)}{(x-a)}=0$ then $P_{n}$ is the $n$th order Taylor polynomial of $f$ centered at $a$
+
+### Remainder Term
+#### Lagrange’s Form
+
+- (4.4) if $f$ is a $n+1$ times differentiable function on $I$ where $a\in I$ and $R_{n}(x)$ is the n-th remainder of $f$ at $a$. then:
+	- (**Lagrange’s Form**) there exists a number $c$ between $a$ and $x$ s.t: $$\displaystyle R_{n}(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$
+
+
+- (page-70) if $f$ is continuous on $[a,b]$ (or $[b,a]$), and $n+1$ times differentiable in $(a,b)$ (or $(b,a)$), and and $n$ times differentiable in $a$ such that $f^{(n)}(x)$ is continuous at $a$, then there exists $c$ between $a$ and $b$ for which $\displaystyle R_{n}(b)=\frac{f^{(n+1)}(c)}{(n+1)!}(b-a)^{n+1}$ that is $\displaystyle f(b)=\sum^{n}_{k=0}\frac{f^{(n)}(a)}{k!}(b-a)^k+\frac{f^{(n+1)}(c)}{(n+1)!}(b-a)^{n+1}$
+	- for $n=0$ it is [[Derivative#Differentiability on Interval|Lagrange's MVT]]
+
+#### Cauchy’s Form
+
+- (4.5) if $f$ is a $n+1$ times differentiable function on $I$ where $a\in I$ and $R_{n}(x)$ is the n-th remainder of $f$ at $a$, then for every $x\in I$ there exists a number $c$ between $a$ and $x$ s.t: $\displaystyle R_{n}(x)=(x-a)\cdot\frac{f^{(n+1)}(c)}{n!}(x-c)^{n}$
+
+#### General Form
+
+#not-in-course
+
+- (4.6) if $f$ is a $n+1$ times differentiable function on $I$ where $a\in I$ and $R_{n}(x)$ is the n-th remainder of $f$ at $a$. Let be $b\in I$ and $b\neq a$, and be a continuous function $\psi:[a,b]\to\mathbb{R}$, where $\psi$ is differentiable on $(a,b)$ and $\psi(a)=0$ and $\psi'(t)\neq 0$ for all between $a$ and $b$. Then there exists a number $c$ between $a$ and $b$ s.t: $\displaystyle R_{n}(b)=\frac{\psi(b)}{\psi'(c)}\cdot\frac{f^{(n+1)}(c)}{n!}(b-c)^{n}$.
+- Schlömilch’s Form (see q4.37)
 

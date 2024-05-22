@@ -12,9 +12,12 @@ The language of the Propositional Logic:
 		- **logical biconditional** (or **material biconditional**) $\leftrightarrow$ 
 	- $n$-ary connective
 
+
+
+
  - The keyboard $\Sigma_{n}=\{ P_{1},\dots,P_{n},\lnot,\lor,\land,\rightarrow,\leftrightarrow,(,) \}$ is the **propositional keyboard** (המקלדת הפסוקית) 
-- המקלדת המלאה
-	 - The keyboard $\Sigma_{\infty}=\{ \lnot,\lor,\land,\rightarrow,\leftrightarrow,(,),P_{1},\dots,P_{n},\dots \}$
+ - The keyboard $\Sigma_{\infty}=\{ \lnot,\lor,\land,\rightarrow,\leftrightarrow,(,),P_{1},\dots,P_{n},\dots \}$ (המקלדת המלאה)
+ - 
 	 - Therefore, for all $n$ we have, $\Sigma_{n}\subset \Sigma_{n+1}\subset \Sigma_{\infty}$
 
 
@@ -24,12 +27,14 @@ The language of the Propositional Logic:
 		- Any proposition preceded by $¬$ is a proposition
 		- Any two propositions can be made into another proposition by writing one of these symbols between them, $∧, ∨, →, ↔$ and enclosing the result in parentheses
 	- הגדרה מדורגת, אינדוקציה טבעית
-		- $E_{0}$ is the set of of elementary propositions with one symbol
-		- Given $E_{n+1}$ is defined: $E_{n}$ is the set of all strings in $E_{n+1}$ in additional all strings $(\varphi\land\psi)$, $(\varphi\lor\psi)$, $(\varphi\rightarrow\psi)$, and $(\varphi\leftrightarrow\psi)$ for which $\psi$ and $\varphi$ are in $E_{n-1}$
-		- A string is called a **proposition** if and only if, it's in one of the sets $E_{n}$ 
-		- The **degree** of a proposition $\varphi$ which denote $d(\varphi)$ is the smallest number $n$ such that $\varphi\in E_{n}$
+		- $E_{0}$ is the set of of **elementary propositions** with one symbol
+		- Given $E_{n-1}$ is defined: $E_{n}$ is the set of all strings in $E_{n-1}$ in additional all strings $(\varphi\land\psi)$, $(\varphi\lor\psi)$, $(\varphi\rightarrow\psi)$, and $(\varphi\leftrightarrow\psi)$ for which $\psi$ and $\varphi$ are in $E_{n-1}$
+		- A string is called a **proposition** if and only if, it is in one of the sets $E_{n}$ 
+		- Depth:
+			- The **depth** of a proposition $\varphi$, denoted by $d(\varphi)$, is the smallest number $n$ such that $\varphi\in E_{n}$ 
 			- A proposition $\varphi$ is an elementary proposition, if and only if, $d(\varphi)=0$
-			- ( #todo  compare with the following definition: Given a well-formed formula φ, we define its **height** to be 1 plus the length of the longest path of its parse tree.)
+			- Given a proposition φ, we define its depth to be 1 + the length of the longest path of its parse tree
+			- $d(P)=0$ for each elementary proposition $P$, and $d(\lnot\varphi)=d(\varphi)+1$, and $d((\varphi @ \psi))=\max(d(\varphi),d(\psi))+1$ for each binary connective @ and propositions $\varphi$ and $\psi$.
 
 
 - Theorem 2.1
