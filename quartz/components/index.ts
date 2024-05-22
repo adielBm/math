@@ -15,11 +15,14 @@ import Graph from "./Graph"
 import Backlinks from "./Backlinks"
 import Search from "./Search"
 import Footer from "./Footer"
-import CustomFooter from "./CustomFooter"
 import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+
+/* i added these */
+import CustomFooter from "./CustomFooter"
+import Empty from "./Empty"
 
 export {
   ArticleTitle,
@@ -38,10 +41,13 @@ export {
   Backlinks,
   Search,
   Footer,
-  CustomFooter,
   DesktopOnly,
   MobileOnly,
   RecentNotes,
   NotFound,
   Breadcrumbs,
+  
+  /* i added these */
+  CustomFooter, 
+  Empty,
 }

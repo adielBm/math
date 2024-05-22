@@ -8,17 +8,12 @@ interface Options {
 }
 
 export default ((opts?: Options) => {
-  const CustomFooter: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
+  const Empty: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     return (
-      <div>
-        <hr />
-        <a href="https://github.com/adielbm/math/">GitHub</a>{" • "}
-        {"Created with "}
-        <a href="https://github.com/jackyzha0/quartz/">Quartz</a>
-      </div>
+      <></>
     )
   }
 
-  CustomFooter.css = style
-  return CustomFooter
+  Empty.css = style
+  return Empty
 }) satisfies QuartzComponentConstructor
