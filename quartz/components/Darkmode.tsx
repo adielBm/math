@@ -9,7 +9,7 @@ import { classNames } from "../util/lang"
 
 const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
   return (
-    <div style="display: flex;gap: 50px;">
+    <div class="dm-gh">
       <div class={classNames(displayClass, "darkmode")}>
         <input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex={-1} />
         <label id="toggle-label-light" for="darkmode-toggle" tabIndex={-1}>

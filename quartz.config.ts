@@ -8,14 +8,12 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Adiel's 2nd 🧠",
+    pageTitle: "Adiel's 2nd",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "adiel.netlify.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
@@ -24,26 +22,26 @@ const config: QuartzConfig = {
       typography: {
         header: "Inter",
         body: "Inter",
-        code: "IBM Plex Mono",
+        code: "Roboto Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#eef6f9",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#1a4e6a",
-          tertiary: "#84a59d",
+          light: "white",
+          lightgray: "#edf2f6",
+          gray: "#839db2",
+          darkgray: "#314351",
+          dark: "#253745",
+          secondary: "#3773a2",
+          tertiary: "#449ade",
           highlight: "rgba(143, 159, 169, 0.15)",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
+          light: "#2e434f",
+          lightgray: "#1a252b",
           gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
+          darkgray: "#ececec",
+          dark: "#9fdfff",
+          secondary: "#95dbff",
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
         },
@@ -59,10 +57,10 @@ const config: QuartzConfig = {
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
+          light: "github-dark",
           dark: "github-dark",
         },
-        keepBackground: false,
+        keepBackground: true,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),

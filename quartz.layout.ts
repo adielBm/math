@@ -19,7 +19,7 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Darkmode(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.DesktopOnly(Component.Backlinks()),
+    Component.Backlinks()
   ],
 }
 
