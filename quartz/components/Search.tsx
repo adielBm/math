@@ -43,7 +43,7 @@ export default ((userOpts?: Partial<SearchOptions>) => {
               autocomplete="off"
               id="search-bar"
               name="search"
-              type="text"
+              type="search"
               aria-label={searchPlaceholder}
               placeholder={searchPlaceholder}
             />

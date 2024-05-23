@@ -251,10 +251,11 @@ input[type="checkbox"] {
 }
 
 blockquote {
+  border-left: 4px solid var(--secondary);
   margin: 1rem 0;
-  border-left: 3px solid var(--secondary);
-  padding-left: 1rem;
-  transition: border-color 0.2s ease;
+  background: var(--lightgray);
+  transition: border-color .2s;
+  padding: 3px 30px !important;
 }
 
 h1,
